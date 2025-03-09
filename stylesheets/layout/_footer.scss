@@ -1,0 +1,74 @@
+footer{
+    background-color: $black;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    @include mobile{
+        font-size: 14px;
+    }
+    .container{
+        @include mobile{
+            padding: 1rem ;
+        }
+    }
+    .row{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .contact-form, .footer-pages, .footer-deals{
+            width: 33%;
+            @include mobile{
+                width: 100%;
+            }
+        }
+        .contact-form{
+            input{
+                width: 328px;
+                border-radius: 8px;
+                height: 43px;
+                margin-bottom: 1rem;
+                margin-top: 0.3rem;
+                padding: 0.3rem 0.5rem;
+            }
+        }
+        .footer-pages, .footer-deals{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            padding: 0 2rem;
+            @include mobile{
+                padding: 0;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                left: 0;
+                background-color: white;
+                @include mobile{
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                }
+            }
+            a{
+                width: 50%;
+                margin: 0rem 0 1rem;
+                @include mobile{
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+        .footer-deals{
+            @include mobile{
+                margin-top: 1.5rem;
+            }
+        }
+        .copy{
+            @include mobile{
+                padding-top: 1rem;
+            }
+        }
+    }
+}

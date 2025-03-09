@@ -1,0 +1,184 @@
+header {
+    background-color: $bg-black;
+    color: $white;
+    padding: 1rem 3rem;
+    @include mobile{
+        padding: 1rem;
+    }
+    a{
+        &:hover{
+            color: $blue;
+        }
+    }
+    .menu{
+        position: absolute;
+        top: 39px;
+        right: 40px;
+        button{
+            position: relative;
+            box-shadow: none;
+            border: none;
+            span{
+                width: 20px;
+                height: 2px;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2rem;
+                transition: all .3s ease-in;
+                position: relative;
+              
+            }
+            &::after, &::before{
+                content: '';
+                width: 30px;
+                height: 2px;
+                background-color: $white;
+                display: block;
+                position: absolute;
+                border-radius: 2rem;
+                transform-origin: 4px;
+                transition: all .3s ease-in;
+            }
+            &::before{
+                top: -7px;
+                transform: rotate(0);
+            }
+            &::after{
+                bottom: -7px;
+                transform: rotate(0);
+            
+            }
+        }
+    }
+    .main-nav{
+        display: flex;
+        justify-items: start;
+        align-items: center;
+        flex-wrap: wrap;
+        .search-box{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            @include mobile{
+                width: 100%;
+            }
+            span{
+                position: absolute;
+                left: 3%;
+            }
+        }
+        input{
+            background: #EFEFEF;
+            border-radius: 20px;
+            width: 440px;
+            height: 43px;
+            padding: 8px 10px 8px 40px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: $black;
+            outline: none;
+            &::placeholder{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                color: #8C8C8C;
+            }
+        }
+        .right-nav{
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            @include mobile{
+                display: none;
+            }
+            .location{
+                display: flex;
+                align-items: center;
+                span{
+                    margin-right: 0.5rem;
+
+                }
+            }
+        }
+
+    }
+    .collapse:not(.show) {
+        display: flex;
+        @include mobile{
+            display: none;
+        }
+    }
+    .sub-nav{
+        padding: 2rem 5rem 1rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        @include mobile{
+            flex-wrap: wrap;
+            padding: 1rem;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        p{
+            margin-bottom: 0;
+
+        }
+       
+        .sub-nav-item{
+            @include mobile{
+                flex: 1;
+            }
+            .dropdown-nav{
+                padding: 2rem;
+                background: $bg-black;
+                transition: all .3s ease-in;
+                transform: translate(0,10px);
+                position: absolute;
+                z-index: -2;
+                pointer-events: none;
+                display: flex;
+                flex-wrap: wrap;
+                a{
+                    display: block;
+                    margin-bottom: 1rem;
+                }
+            }
+            &:hover{
+                p{
+                    color: $blue;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+                .dropdown-nav{
+                    opacity: 1;
+                    transform: translate(0,0px);
+                    z-index: 2;
+                    pointer-events: all;
+                    box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 21%), 0px 6px 10px 0px rgb(0 0 0 / 14%);
+                    padding-left: 3rem;
+                    @include mobile{
+                        transform: translate(0,-9px);
+                    }
+                }
+            }
+        }
+        
+        
+           
+
+    }
+}
+

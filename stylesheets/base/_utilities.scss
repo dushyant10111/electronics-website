@@ -1,0 +1,32 @@
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-indicators {
+    justify-content: flex-start;
+    margin-left: 9%;
+    @include mobile {
+        justify-content: center;
+    }
+    li {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+}
+
+.sticky-bottom {
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+}
+
+.inactive {
+    color: $gray !important;
+}
+
+

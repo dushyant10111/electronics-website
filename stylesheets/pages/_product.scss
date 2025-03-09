@@ -1,0 +1,171 @@
+.product-page{
+    .product{
+        .product-detail{
+            display: grid;
+            grid-template-areas:
+          "a b"
+          "c  c";
+          grid-template-rows: 1fr auto ;
+          grid-template-columns: 500px 1fr;
+          gap: 50px;
+          @include mobile{
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "a a"
+            "b b"
+          "c  c"
+            ;
+            gap: 0;
+          }
+          .product-image{
+                 grid-area: a;
+                 .carousel-indicators{
+                    position: relative;
+                   button{
+                    width: 150px;
+                    height: 150px;
+                    background-color: #F9F9F9;
+                    @include mobile{
+                        width: 50px;
+                        height: 50px;
+                    }
+                   }
+                 
+                 }
+                 .carousel-inner{
+                    
+                    .carousel-item{
+                    background-color: #F9F9F9;
+                    width: 500px;
+                    height: 500px;
+                    @include mobile{
+                        width: 90%;
+                        height: inherit;
+                    }
+                    }
+                    }
+          }
+          .product-description{
+            grid-area: b;
+            padding-right: 14rem;
+            @include mobile{
+                padding-right: 0rem;
+            }
+            .main-detail{
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #D6D6D6;
+
+                h2{
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 43px;
+                    @include mobile{
+                        font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                    }
+                }
+                .cta{
+                    @include mobile{
+                        width: 100%;
+                        text-align: center;
+                    }
+                   
+                }
+            }
+            .general-detail{
+                border-bottom: 1px solid #D6D6D6;
+                padding-bottom: 1rem;
+                h5{
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                .general-div{
+                    display: flex;
+                    p{
+                        font-weight: 400;
+                        font-size: 16px;
+                    line-height: 22px;
+                    }
+                    .general-lable{
+                        font-weight: 500;
+                        flex-basis: 138px;
+                    }
+                }
+            }
+          }
+          .description-tabs{
+            grid-area: c;
+            background: #F9F9F9;
+            border: 1px solid #D6D6D6;
+            padding: 1.5rem 2.5rem;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            @include mobile{
+                padding: 1rem;
+            }
+            h3{
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+            }
+            p, li{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .nav-pills{
+                border-bottom: 1px solid #D6D6D6;
+            }
+            .nav-link{
+                font-weight: 700;
+                font-size: 24px;
+                color: #BDBDBD;
+                line-height: 32px;
+                background: transparent;
+                padding-left: 0;
+                padding-right: 1.5rem;
+                &.active{
+                    color: $black;
+                }
+            }
+            .review-top{
+                    font-size: 18px;
+                    line-height: 24px;
+                h6{
+                    font-weight: 700;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+            .review-form{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 2rem;
+                @include mobile{
+                    grid-template-columns: 1fr;
+                }
+                input, textarea{
+                    background: #FFFFFF;
+                    border: 1px solid #D6D6D6;
+                    border-radius: 0;
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+                label{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+          }
+        }
+    }
+   
+}

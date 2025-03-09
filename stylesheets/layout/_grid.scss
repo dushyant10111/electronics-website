@@ -1,0 +1,61 @@
+
+.container {
+    padding: 5rem 0;
+    margin: auto;
+    max-width: 1340px;
+    @include mobile {
+        padding: 3rem 1rem;
+    }
+    @include tablet-port {
+        padding: 0rem 1.5rem;
+    }
+    @include tablet-land {
+        padding: 0rem 3rem;
+    }
+}
+
+.sub-pages {
+    padding: 0rem 4rem;
+    @include mobile {
+        padding: 0rem 1.5rem;
+    }
+    @include tablet-port {
+        padding: 0rem 1.5rem;
+    }
+    @include tablet-land {
+        padding: 0rem 3rem;
+    }
+}
+
+.container-fluid {
+    padding: 0rem 0rem;
+    @include mobile {
+        padding: 0rem 0rem;
+    }
+    @include tablet-port {
+        padding: 0rem 0rem;
+    }
+    @include tablet-land {
+        padding: 0rem 0rem;
+    }
+    max-width: 100%;
+    .row {
+        margin: 0;
+    }
+}
+
+
+
+
+.space {
+    height: 8.75rem;
+    @include tablet-port {
+        height: 4.75rem;
+    }
+    @include mobile {
+        height: 4.75rem;
+    }
+    @include tablet-land {
+        height: 5.75rem;
+    }
+}

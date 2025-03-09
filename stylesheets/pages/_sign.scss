@@ -1,0 +1,119 @@
+.signin{
+    header{
+        background-color: white;
+        display: grid;
+        place-items: center;
+        border-bottom: 1px solid #D6D6D6;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        margin-bottom: 5rem;
+        @include mobile{
+            padding: 0 2rem;
+        }
+        h1{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 43px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 1rem;
+        }
+        form{
+            border: 1px solid #E0E0E0;
+            border-radius: 12px;
+            padding: 2rem;
+            width: 623px;
+            position: relative;
+            @include mobile{
+                width: 100%;
+            }
+            .form-group{
+                display: flex;
+                flex-direction: column;
+                label{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin-bottom: 0.75rem;
+                }
+                input{
+                    border: 1px solid #434546;
+                    border-radius: 4px;
+                    padding: 1rem;
+                    margin-bottom: 2rem;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+                    &::placeholder{
+                        color: #828282;
+                    }
+                }
+            }
+           .forgot{
+            a{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                text-decoration-line: underline;
+                color: #202124;
+            }
+           }
+           .form-check{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .remember-check{
+                position: absolute;
+                left: 0;
+                label{
+                    font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                }
+            }
+
+           }
+           .signin-button{
+            display: grid;
+            place-items: center;
+            margin: 1rem 0;
+           }
+           .signup-box{
+            display: grid;
+            place-items: center;
+            padding-top: 2rem;
+            position: relative;
+            &::after{
+                content: '';
+                width: 112%;
+                position: absolute;
+                height: 1px;
+                background-color: #D6D6D6;
+                top: 8px;
+            }
+            p{
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .cta{
+                background-color: #fff;
+                color: #202124;
+                border: 1px solid currentColor;
+            }
+            .link{
+                color: $blue    ;
+            }
+           }
+        }
+    }
+}
