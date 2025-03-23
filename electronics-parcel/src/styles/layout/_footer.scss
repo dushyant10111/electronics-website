@@ -1,0 +1,205 @@
+@use '../base/variables' as v;
+
+/* Footer styles */
+.footer {
+  background-color: #f8f9fa;
+  color: v.$text-color;
+  
+  .footer-top {
+    padding: v.$spacing-xxl 0;
+    border-bottom: 1px solid v.$border-color;
+    
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: v.$spacing-xl;
+      
+      @media (max-width: v.$breakpoint-lg) {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      @media (max-width: v.$breakpoint-sm) {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .footer-about {
+      .logo {
+        margin-bottom: v.$spacing-md;
+        
+        img {
+          height: 40px;
+        }
+      }
+      
+      p {
+        margin-bottom: v.$spacing-md;
+        line-height: 1.6;
+      }
+      
+      .social-links {
+        display: flex;
+        gap: v.$spacing-sm;
+        
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          background-color: v.$primary-color;
+          color: v.$white;
+          border-radius: 50%;
+          transition: all 0.3s ease;
+          
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: v.$shadow-sm;
+          }
+        }
+      }
+    }
+    
+    .footer-links {
+      h4 {
+        font-size: v.$font-size-large;
+        margin-bottom: v.$spacing-lg;
+        position: relative;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          width: 40px;
+          height: 2px;
+          background-color: v.$primary-color;
+        }
+      }
+      
+      ul {
+        li {
+          margin-bottom: v.$spacing-sm;
+          
+          a {
+            color: v.$text-color;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            
+            &:hover {
+              color: v.$primary-color;
+              transform: translateX(5px);
+            }
+            
+            svg {
+              margin-right: v.$spacing-xs;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    
+    .footer-contact {
+      h4 {
+        font-size: v.$font-size-large;
+        margin-bottom: v.$spacing-lg;
+        position: relative;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          width: 40px;
+          height: 2px;
+          background-color: v.$primary-color;
+        }
+      }
+      
+      .contact-info {
+        li {
+          margin-bottom: v.$spacing-md;
+          display: flex;
+          align-items: flex-start;
+          
+          svg {
+            margin-right: v.$spacing-sm;
+            margin-top: 4px;
+            color: v.$primary-color;
+          }
+          
+          span {
+            font-size: v.$font-size-small;
+            line-height: 1.5;
+          }
+        }
+      }
+      
+      .newsletter {
+        margin-top: v.$spacing-lg;
+        
+        h5 {
+          font-size: v.$font-size-base;
+          margin-bottom: v.$spacing-sm;
+        }
+        
+        .newsletter-form {
+          display: flex;
+          
+          input {
+            flex: 1;
+            padding: v.$spacing-xs v.$spacing-sm;
+            border: 1px solid v.$border-color;
+            border-radius: v.$border-radius-sm 0 0 v.$border-radius-sm;
+            font-size: v.$font-size-small;
+            
+            &:focus {
+              border-color: v.$primary-color;
+            }
+          }
+          
+          button {
+            padding: v.$spacing-xs v.$spacing-sm;
+            background-color: v.$primary-color;
+            color: v.$white;
+            border-radius: 0 v.$border-radius-sm v.$border-radius-sm 0;
+            
+            &:hover {
+              background-color: darken(v.$primary-color, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-bottom {
+    padding: v.$spacing-lg 0;
+    background-color: v.$white;
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      @media (max-width: v.$breakpoint-md) {
+        flex-direction: column;
+        gap: v.$spacing-md;
+        text-align: center;
+      }
+    }
+    
+    .copyright {
+      font-size: v.$font-size-small;
+      color: v.$light-text;
+    }
+    
+    .payment-methods {
+      img {
+        height: 30px;
+      }
+    }
+  }
+} 

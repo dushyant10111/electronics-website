@@ -1,0 +1,116 @@
+@use '../base/variables' as v;
+
+/* Slider styles */
+.slider {
+  position: relative;
+  margin-bottom: v.$spacing-xl;
+  
+  .slider-container {
+    overflow: hidden;
+    border-radius: v.$border-radius-md;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 v.$spacing-md;
+    pointer-events: none;
+    z-index: 10;
+    
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(v.$white, 0.8);
+      box-shadow: v.$shadow-sm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: v.$text-color;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: v.$white;
+        color: v.$primary-color;
+      }
+    }
+  }
+  
+  .slider-pagination {
+    position: absolute;
+    bottom: v.$spacing-md;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: v.$spacing-xs;
+    z-index: 10;
+    
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(v.$white, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+      &.active, &:hover {
+        background-color: v.$white;
+      }
+    }
+  }
+}
+
+/* Swiperjs custom styles */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(v.$white, 0.8);
+  box-shadow: v.$shadow-sm;
+  
+  &::after {
+    font-size: 16px;
+    color: v.$text-color;
+  }
+  
+  &:hover {
+    background-color: v.$white;
+    
+    &::after {
+      color: v.$primary-color;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(v.$white, 0.5);
+  opacity: 1;
+  
+  &-active {
+    background-color: v.$white;
+  }
+}
+
+.product-slider {
+  overflow: visible;
+  padding-bottom: v.$spacing-lg;
+  
+  .swiper-slide {
+    height: auto;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: calc(50% - 60px);
+  }
+} 

@@ -1,0 +1,10 @@
+@use '../base/variables' as v;
+
+/* Home page styles */
+.why-choose-us {
+  background-color: #f8f9fa;
+  
+  .section-title {
+    margin-bottom: v.$spacing-xl;
+  }
+} 

@@ -1,0 +1,169 @@
+@use '../base/variables' as v;
+
+/* Grid layout styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: v.$spacing-md;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: v.$spacing-md;
+  
+  @media (max-width: v.$breakpoint-xl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (max-width: v.$breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: v.$breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: v.$spacing-md;
+  
+  @media (max-width: v.$breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (max-width: v.$breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: v.$breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: v.$spacing-lg;
+  
+  @media (max-width: v.$breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: v.$breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: v.$spacing-xl;
+  
+  @media (max-width: v.$breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: v.$spacing-lg;
+  
+  @media (max-width: v.$breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: v.$breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: v.$spacing-xl;
+  
+  @media (max-width: v.$breakpoint-lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: v.$spacing-xl;
+  
+  @media (max-width: v.$breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flexbox layouts */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -#{v.$spacing-sm};
+  
+  .flex-col {
+    padding: 0 v.$spacing-sm;
+    
+    &-1 {
+      width: 8.333333%;
+    }
+    
+    &-2 {
+      width: 16.666667%;
+    }
+    
+    &-3 {
+      width: 25%;
+    }
+    
+    &-4 {
+      width: 33.333333%;
+    }
+    
+    &-5 {
+      width: 41.666667%;
+    }
+    
+    &-6 {
+      width: 50%;
+    }
+    
+    &-7 {
+      width: 58.333333%;
+    }
+    
+    &-8 {
+      width: 66.666667%;
+    }
+    
+    &-9 {
+      width: 75%;
+    }
+    
+    &-10 {
+      width: 83.333333%;
+    }
+    
+    &-11 {
+      width: 91.666667%;
+    }
+    
+    &-12 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: v.$breakpoint-md) {
+    .flex-col {
+      &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11 {
+        width: 100%;
+      }
+    }
+  }
+} 

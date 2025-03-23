@@ -1,0 +1,177 @@
+@use '../base/variables' as v;
+
+/* Banner styles */
+.banner {
+  position: relative;
+  border-radius: v.$border-radius-md;
+  overflow: hidden;
+  background-color: v.$secondary-color;
+  margin-bottom: v.$spacing-xl;
+  
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: v.$spacing-xl;
+    
+    h2 {
+      font-size: v.$font-size-h1;
+      font-weight: v.$font-weight-bold;
+      margin-bottom: v.$spacing-sm;
+      color: v.$white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      
+      @media (max-width: v.$breakpoint-md) {
+        font-size: v.$font-size-h2;
+      }
+    }
+    
+    p {
+      font-size: v.$font-size-large;
+      margin-bottom: v.$spacing-lg;
+      color: v.$white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      max-width: 60%;
+      
+      @media (max-width: v.$breakpoint-md) {
+        font-size: v.$font-size-base;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.hero-section {
+  position: relative;
+  height: 500px;
+  background-color: v.$secondary-color;
+  background-image: url('../assets/main-banner.png');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: v.$spacing-xxl;
+  
+  @media (max-width: v.$breakpoint-md) {
+    height: 400px;
+  }
+  
+  @media (max-width: v.$breakpoint-sm) {
+    height: 300px;
+    background-image: url('../assets/banner-mobile.png');
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: v.$spacing-xl;
+    max-width: 600px;
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: v.$font-weight-bold;
+      margin-bottom: v.$spacing-sm;
+      color: v.$white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      
+      @media (max-width: v.$breakpoint-md) {
+        font-size: 2rem;
+      }
+      
+      @media (max-width: v.$breakpoint-sm) {
+        font-size: 1.5rem;
+      }
+    }
+    
+    p {
+      font-size: v.$font-size-large;
+      margin-bottom: v.$spacing-lg;
+      color: v.$white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      
+      @media (max-width: v.$breakpoint-sm) {
+        font-size: v.$font-size-base;
+      }
+    }
+  }
+}
+
+.promo-banner {
+  position: relative;
+  height: 200px;
+  background-color: v.$primary-color;
+  margin: v.$spacing-xxl 0;
+  
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: v.$spacing-lg;
+    
+    h2 {
+      font-size: v.$font-size-h2;
+      font-weight: v.$font-weight-bold;
+      margin-bottom: v.$spacing-sm;
+      color: v.$white;
+    }
+    
+    p {
+      font-size: v.$font-size-large;
+      margin-bottom: v.$spacing-lg;
+      color: v.$white;
+    }
+  }
+}
+
+.category-card {
+  display: block;
+  background-color: v.$white;
+  border-radius: v.$border-radius-md;
+  box-shadow: v.$shadow-sm;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: v.$shadow-md;
+  }
+  
+  .category-image {
+    height: 200px;
+    background-color: v.$secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: v.$spacing-md;
+    
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  h3 {
+    padding: v.$spacing-md;
+    color: v.$text-color;
+    font-size: v.$font-size-base;
+    font-weight: v.$font-weight-medium;
+    margin: 0;
+  }
+} 

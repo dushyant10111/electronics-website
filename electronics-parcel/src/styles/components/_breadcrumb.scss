@@ -1,0 +1,41 @@
+@use '../base/variables' as v;
+
+/* Breadcrumb styles */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: v.$spacing-md 0;
+  margin-bottom: v.$spacing-lg;
+  list-style: none;
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    font-size: v.$font-size-small;
+    
+    a {
+      color: v.$light-text;
+      text-decoration: none;
+      
+      &:hover {
+        color: v.$primary-color;
+      }
+    }
+    
+    &.active {
+      color: v.$text-color;
+      font-weight: v.$font-weight-medium;
+    }
+    
+    &:not(:last-child) {
+      margin-right: v.$spacing-xs;
+      
+      &::after {
+        content: '/';
+        margin-left: v.$spacing-xs;
+        color: v.$light-text;
+      }
+    }
+  }
+}

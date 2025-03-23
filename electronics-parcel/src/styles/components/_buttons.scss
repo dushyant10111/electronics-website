@@ -1,0 +1,126 @@
+@use '../base/variables' as v;
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: v.$spacing-sm v.$spacing-lg;
+  border-radius: v.$border-radius-sm;
+  font-weight: v.$font-weight-medium;
+  font-size: v.$font-size-base;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  
+  &:disabled {
+    opacity: 0.65;
+    pointer-events: none;
+  }
+  
+  svg {
+    margin-right: v.$spacing-xs;
+  }
+}
+
+.btn-primary {
+  background-color: v.$primary-color;
+  color: v.$white;
+  
+  &:hover, &:focus {
+    background-color: darken(v.$primary-color, 10%);
+    color: v.$white;
+  }
+}
+
+.btn-secondary {
+  background-color: v.$secondary-color;
+  color: v.$text-color;
+  
+  &:hover, &:focus {
+    background-color: darken(v.$secondary-color, 10%);
+    color: v.$text-color;
+  }
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid v.$primary-color;
+  color: v.$primary-color;
+  
+  &:hover, &:focus {
+    background-color: v.$primary-color;
+    color: v.$white;
+  }
+}
+
+.btn-success {
+  background-color: v.$success;
+  color: v.$white;
+  
+  &:hover, &:focus {
+    background-color: darken(v.$success, 10%);
+    color: v.$white;
+  }
+}
+
+.btn-danger {
+  background-color: v.$danger;
+  color: v.$white;
+  
+  &:hover, &:focus {
+    background-color: darken(v.$danger, 10%);
+    color: v.$white;
+  }
+}
+
+.btn-link {
+  background-color: transparent;
+  color: v.$primary-color;
+  padding: 0;
+  
+  &:hover, &:focus {
+    text-decoration: underline;
+    color: darken(v.$primary-color, 10%);
+  }
+}
+
+.btn-sm {
+  padding: v.$spacing-xs v.$spacing-md;
+  font-size: v.$font-size-small;
+}
+
+.btn-lg {
+  padding: v.$spacing-md v.$spacing-xl;
+  font-size: v.$font-size-large;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-group {
+  display: inline-flex;
+  
+  .btn {
+    border-radius: 0;
+    
+    &:first-child {
+      border-top-left-radius: v.$border-radius-sm;
+      border-bottom-left-radius: v.$border-radius-sm;
+    }
+    
+    &:last-child {
+      border-top-right-radius: v.$border-radius-sm;
+      border-bottom-right-radius: v.$border-radius-sm;
+    }
+    
+    &:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+} 

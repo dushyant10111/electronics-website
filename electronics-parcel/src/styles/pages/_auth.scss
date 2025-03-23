@@ -1,0 +1,151 @@
+@use '../base/variables' as v;
+
+/* Auth pages styles */
+.auth-page {
+  background-color: #f8f8f8;
+  min-height: calc(100vh - 200px); // Adjust based on header/footer height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+  }
+  
+  .auth-card {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+  }
+  
+  .auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: v.$primary-color;
+    }
+    
+    p {
+      color: #777;
+      font-size: 0.95rem;
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #333;
+    }
+    
+    input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      
+      &:focus {
+        border-color: v.$primary-color;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(v.$primary-color, 0.1);
+      }
+    }
+    
+    .text-right {
+      text-align: right;
+      
+      a {
+        color: v.$primary-color;
+        font-size: 0.85rem;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    &:active {
+      transform: scale(0.98);
+    }
+    
+    &.btn-primary {
+      background-color: v.$primary-color;
+      color: white;
+      
+      &:hover {
+        background-color: darken(v.$primary-color, 10%);
+      }
+    }
+    
+    &.w-full {
+      width: 100%;
+    }
+  }
+  
+  .auth-footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    
+    p {
+      color: #666;
+      font-size: 0.95rem;
+      
+      a {
+        color: v.$primary-color;
+        font-weight: 600;
+        text-decoration: none;
+        margin-left: 0.25rem;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .auth-card {
+      padding: 1.5rem;
+    }
+    
+    .auth-header {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+} 

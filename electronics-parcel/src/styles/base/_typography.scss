@@ -1,0 +1,77 @@
+@use '../base/variables' as v;
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: v.$spacing-md;
+  font-weight: v.$font-weight-semibold;
+  line-height: 1.2;
+  color: v.$black;
+}
+
+h1 {
+  font-size: v.$font-size-h1;
+}
+
+h2 {
+  font-size: v.$font-size-h2;
+}
+
+h3 {
+  font-size: v.$font-size-h3;
+}
+
+h4 {
+  font-size: v.$font-size-h4;
+}
+
+p {
+  margin-bottom: v.$spacing-md;
+  line-height: 1.5;
+}
+
+strong, b {
+  font-weight: v.$font-weight-bold;
+}
+
+small {
+  font-size: v.$font-size-small;
+}
+
+.text-muted {
+  color: v.$light-text;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: v.$font-size-h2;
+  margin-bottom: v.$spacing-lg;
+  text-align: center;
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: v.$primary-color;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+} 
