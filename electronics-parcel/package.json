@@ -2,7 +2,7 @@
   "name": "electronics-website",
   "version": "1.0.0",
   "description": "Electronics e-commerce website built with React, Parcel, and SCSS",
-  "main": "index.js",
+  "source": "src/index.js",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",

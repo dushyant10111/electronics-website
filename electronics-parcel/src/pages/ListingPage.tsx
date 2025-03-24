@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
+// import '../';
 
 interface Product {
   id: number;

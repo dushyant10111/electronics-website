@@ -2,6 +2,7 @@
 
 /* B2B page styles */
 .b2b-page {
+  
   .b2b-header {
     margin-bottom: 3rem;
     
@@ -242,7 +243,7 @@
         transition: background-color 0.3s ease;
         
         &:hover {
-          background-color: darken(v.$primary-color, 10%);
+          background-color: #060606;;
         }
       }
     }
